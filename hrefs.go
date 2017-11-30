@@ -16,14 +16,14 @@ Get is a wrapper for all the other functions. It attempts to determine the
 correct function based on the tag type
 */
 func Get(t html.Token) (uri string) {
-	switch {
-	case t.Data == "a":
+	switch t.Data {
+	case "a":
 		uri = GetHref(t)
-	case t.Data == "img":
+	case "img":
 		uri = GetSrc(t)
-	case t.Data == "script":
+	case "script":
 		uri = GetSrc(t)
-	case t.Data == "link":
+	case "link":
 		uri = GetCSS(t)
 	}
 	return
