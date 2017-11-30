@@ -1,5 +1,6 @@
 # PACKAGE DOCUMENTATION
 
+```
 package hrefs
     import "github.com/markhuge/hrefs"
 
@@ -11,9 +12,11 @@ package hrefs
 	- image URIs from <img> tags
 	- stylesheet URIs from <link> tags
 	- script URIs from <script> tags
+```
 
 ## FUNCTIONS
 
+```
 func Get(t html.Token) (uri string)
     Get is a wrapper for all the other functions. It attempts to determine
     the correct function based on the tag type
@@ -26,6 +29,7 @@ func GetHref(t html.Token) (href string)
 
 func GetSrc(t html.Token) (src string)
     GetSrc returns src values when present
+```
 
  ## TEST OUTPUT
 ```
