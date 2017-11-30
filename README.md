@@ -27,4 +27,24 @@ func GetHref(t html.Token) (href string)
 func GetSrc(t html.Token) (src string)
     GetSrc returns src values when present
 
-
+ ## TEST OUTPUT
+```
+=== RUN   TestGetA
+--- PASS: TestGetA (0.00s)
+	hrefs_test.go:13: hrefs.Get <a> Tag
+=== RUN   TestGetA_Hash
+--- PASS: TestGetA_Hash (0.00s)
+	hrefs_test.go:24: Expect empty result hrefs.Get <a href="#"> Tag
+=== RUN   TestGetImg
+--- PASS: TestGetImg (0.00s)
+	hrefs_test.go:35: hrefs.Get <img> Tag
+=== RUN   TestGetLink
+--- PASS: TestGetLink (0.00s)
+	hrefs_test.go:46: hrefs.Get <link> Tag
+=== RUN   TestGetScript
+--- PASS: TestGetScript (0.00s)
+	hrefs_test.go:57: hrefs.Get <script> Tag
+PASS
+coverage: 100.0% of statements
+ok  	github.com/markhuge/hrefs	0.001s
+```
